@@ -1,0 +1,33 @@
+
+-->  How to create package.json : this is required for all Node projects.
+  It can be created either manually or using GIT Bash
+  Steps:
+  1. Navigate to project directory
+  2. run following commands
+       - npm init
+       - give details asked (it will be saved in package.json)
+       - say yes on confirm
+
+
+--> How to create a simple web server
+ [code]
+ var http = require('http');
+ http.createServer(function (request, response) {
+    response.writeHead(200, {'Content-Type': 'text/plain'});
+    response.end('Hello World\n');
+}).listen(8124,'localhost');
+ console.log('Server running at http://127.0.0.1:8124/');
+ [/code]
+
+
+  You can choose to give a port on which this server listens
+  giving URL is optional. In case we don't specify default would be localhost.
+  Run in node terrminal as
+  > Node filename
+       OR
+  if GIT BASH
+  > npm start
+
+  Now you can navigate to browser at http://127.0.0.1:8124/ to see result Hello World
+
+
